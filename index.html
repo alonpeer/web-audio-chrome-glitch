@@ -1,0 +1,17 @@
+<html>
+  <head>
+  </head>
+
+  <body>
+    <p><a href="?">Disable web audio</a> | <a href="?web-audio">Enable web audio</a></p>
+    <p><strong>Instructions:</strong> Click "Switch source" to start playback and then switch between the sine wave AAC and the silent MP3 sources.</p>
+    <p>Expected: audio smoothly goes between the silence and the sine wave.<br /><img src="no-web-audio.png" width="50%" /></p>
+    <p>Actual: sometimes, <strong>when using web audio</strong>, when switching from AAC to MP3 there's a short gap in playback,
+      followed by a short burst of audio, followed by silence again.<br /><img src="with-web-audio.png" width="50%"/></p>
+    <p><button id="start">Switch source</button></p>
+    <p><audio id="audio" controls></audio></p>
+    <p id="source"></p>
+
+    <script src="script.js"></script>
+  </body>
+</html>
